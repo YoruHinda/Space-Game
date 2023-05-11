@@ -1,10 +1,17 @@
 package com.github.yoruhinda.spacegame.game.handlers;
 
+import com.github.yoruhinda.spacegame.game.GamePanel;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-    public boolean left, right;
+    private GamePanel gamePanel;
+
+    public KeyHandler(GamePanel gamePanel){
+        this.gamePanel = gamePanel;
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -13,20 +20,20 @@ public class KeyHandler implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_A){
-            left = true;
+            gamePanel.getGame().getPlayer().left = true;
         }
         if(e.getKeyCode() == KeyEvent.VK_D){
-            right = true;
+            gamePanel.getGame().getPlayer().right = true;
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_A){
-            left = false;
+            gamePanel.getGame().getPlayer().left = false;
         }
         if(e.getKeyCode() == KeyEvent.VK_D){
-            right = false;
+            gamePanel.getGame().getPlayer().right = false;
         }
     }
 }

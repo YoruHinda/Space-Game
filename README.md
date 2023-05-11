@@ -2,7 +2,7 @@
 
 ## Description
 
-Develop a multiplayer game in java based in old game called asteroid to develop
+Develop a multiplayer gamePanel in java based in old gamePanel called asteroid to develop
 my knowledge about threads and sockets.
 
 ## Tools

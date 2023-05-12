@@ -19,21 +19,33 @@ public class KeyHandler implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_A){
-            gamePanel.getGame().getPlayer().left = true;
-        }
-        if(e.getKeyCode() == KeyEvent.VK_D){
-            gamePanel.getGame().getPlayer().right = true;
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_A:
+                gamePanel.getGame().getPlayer().left = true;
+                break;
+            case KeyEvent.VK_D:
+                gamePanel.getGame().getPlayer().right = true;
+                break;
+            case KeyEvent.VK_SPACE:
+                gamePanel.getGame().getPlayer().shooting = true;
+                break;
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_A){
-            gamePanel.getGame().getPlayer().left = false;
-        }
-        if(e.getKeyCode() == KeyEvent.VK_D){
-            gamePanel.getGame().getPlayer().right = false;
+        switch (e.getKeyCode()){
+            case KeyEvent.VK_A:
+                gamePanel.getGame().getPlayer().left = false;
+                break;
+            case KeyEvent.VK_D:
+                gamePanel.getGame().getPlayer().right = false;
+                break;
+            case KeyEvent.VK_SPACE:
+                gamePanel.getGame().getPlayer().shooting = false;
+                break;
         }
     }
+
+
 }

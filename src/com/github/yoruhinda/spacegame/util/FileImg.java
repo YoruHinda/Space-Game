@@ -1,7 +1,6 @@
 package com.github.yoruhinda.spacegame.util;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,7 @@ public class FileImg {
     public static final String ICON = "Icon.png";
 
 
-    public static Image getImage(String imageName) {
+    public static BufferedImage getImage(String imageName) {
         BufferedImage image = null;
         InputStream resourceAsStream = FileImg.class.getResourceAsStream("/resources/" + imageName);
         try {

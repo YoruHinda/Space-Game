@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Player extends Entity {
     private float playerSpeed = 5f;
-    private BufferedImage playerSprite = FileImg.getImage(FileImg.SECOND_PLAYER);
+    private BufferedImage playerSprite = FileImg.getImage(FileImg.PLAYER);
     private List<Bullet> bullets = new ArrayList<>();
     private long timeOfLastProjectile;
     public boolean left, right, shooting;

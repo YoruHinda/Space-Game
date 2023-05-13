@@ -8,8 +8,7 @@ import java.io.InputStream;
 public class FileImg {
     public static final String BACKGROUND = "Background.jpg";
     public static final String ASTEROID = "Asteroid.png";
-    public static final String FIRST_PLAYER = "FirstPlayer.png";
-    public static final String SECOND_PLAYER = "SecondPlayer.png";
+    public static final String PLAYER = "Player.png";
     public static final String ICON = "Icon.png";
 
 

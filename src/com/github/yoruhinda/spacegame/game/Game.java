@@ -18,12 +18,12 @@ public class Game extends Thread {
     private Player player = new Player(10, 490);
 
     public Game() {
-        gamePanel = new GamePanel(this);
-        gameWindow = new GameWindow(gamePanel);
-        startGameLoop();
+        startGame();
     }
 
-    public void startGameLoop() {
+    public void startGame() {
+        gamePanel = new GamePanel(this);
+        gameWindow = new GameWindow(gamePanel);
         start();
     }
 
